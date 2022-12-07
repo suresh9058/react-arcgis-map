@@ -20,7 +20,9 @@ function App() {
 
       const view = new MapView({
         container: mapDiv.current,
-        map: webmap
+        map: webmap,
+        center: [-118.80543,34.02700],
+        zoom: 13
       });
 
       const popupTrailheads = {
@@ -31,7 +33,8 @@ function App() {
        const trailheads = new FeatureLayer({
         url: "https://services3.arcgis.com/GVgbJbqm8hXASVYi/arcgis/rest/services/Trailheads_Styled/FeatureServer/0",
         outFields: ["TRL_NAME","CITY_JUR","X_STREET","PARKING","ELEV_FT"],
-        popupTemplate: popupTrailheads
+        popupTemplate: popupTrailheads,
+        apiKey: "AAPK0d85f90f81564bd29e37798cd6905282OYb_9h6pgs1GSJ1FKXqKXzqxYTepMfo1NJ-EKRN5y2cEIPOIP9do2PxgSqq3P7kK"
       });
 
       webmap.add(trailheads);
