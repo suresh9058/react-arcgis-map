@@ -34,7 +34,7 @@ function App() {
         popupTemplate: popupTrailheads
       });
 
-      map.add(trailheads);
+      webmap.add(trailheads);
       const search = new Search({  //Add Search widget
         view: view
       });
